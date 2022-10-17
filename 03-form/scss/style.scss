@@ -1,0 +1,247 @@
+@import '_variables';
+
+::selection{
+	color: $white;
+	background: $black;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+	body{
+		display: grid;
+		grid-template-rows: 1fr 50px;
+		justify-items: center;
+		align-items: center;
+		background: linear-gradient(rgba(255, 0, 0, .5),rgba(255, 0, 0, .5)), url('../images/bg-intro-desktop.png') no-repeat center;
+		background-size: cover; 
+		font-family: $fontPopns;
+		font-size: 15px;
+	}
+}
+.container{
+	width: min(80%, 960px);
+	margin: 0 auto;
+}
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text{
+	color: $white;
+	flex: 1 1 45%;
+	margin: 40px 0;
+	animation: intro ease .9s;
+}
+
+@keyframes intro {
+  from {
+		transform:translate3d(0, -50vh, 0);
+  }
+  to {
+		transform:translate3d(0, 0, 0);
+  }
+}
+.text h1{
+	font-size: 46px;
+	line-height: calc(30px * 1.5);
+	padding: 20px 0;
+}
+.text p{
+	max-width: 400px;
+	line-height: calc(15px * 1.4);
+}
+.box-form{
+	flex: 1 1 55%;
+	margin-left: 20px;
+}
+.trial{
+	background: $blue;
+	padding: 14px;
+	border-radius: 10px;
+	color: $white;
+	font-size: 14px;
+	text-align: center;
+	box-shadow: $boxShadow;
+	margin: 0 0 20px;
+}
+form{
+	background: $white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: $boxShadow;
+}
+form .input-block{
+	position: relative;
+	width: 100%;
+	margin: 55px 0;
+}
+input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 25px 10px;
+	background: transparent;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	outline: none;
+}
+label{
+	position: relative;
+	top: .8rem;
+	left: .7rem;
+	transition: all .1s ease-in-out;
+	background: #fff;
+	padding: 0 5px;
+}
+input:focus ~ label, input:not(:placeholder-shown).input:not(:focus)~label{
+	top: -.7rem;
+	left: .8rem;
+	font-size: .8em;
+}
+form div:nth-child(1){
+	margin-top: 0;
+}
+.msgError{
+	position: absolute;
+	top: 50px;
+	right: 0;
+	font-size: 13px;
+	color: $red;
+	display: none;
+}
+.msgError.active{
+	display: block;
+}
+.btn{
+	background: $green;
+	padding: 14px;
+	border: none;
+	border-radius: 10px;
+	color: $white;
+	text-align: center;
+	box-shadow: $boxShadow;
+	margin: 20px 0;
+	width: 100%;
+	cursor: pointer;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: $fontPopns;
+	letter-spacing: 2px;
+	font-size: 16px;
+	transition: all .3s ease-in-out;
+}
+.btn:hover{
+	opacity: .8;
+}
+.terms{
+	color: $blueGreyish;
+	font-size: 14px;
+	text-align: center;
+	margin: 0 auto;
+}
+.terms a{
+	color: $red;
+	font-weight: bold;
+	text-decoration: none;
+}
+footer{
+	width: 100%;
+	text-align: center;
+	padding: 15px;
+	background: $blue;
+}
+footer a{
+	text-decoration: none;
+	color: $white;
+}
+.modal-container{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+	transition: all .3s ease-in-out;
+	display: none;
+}
+.modal-container.active{
+	display: flex;
+}
+.modal{
+	background: #fff;
+	width: min(60%, 300px);
+	padding: 40px;
+	position: relative;
+	border-radius: 10px;
+}
+@keyframes modal{
+	from{
+		opacity: 0;
+		transform: translate3d(0, -60px, 0);
+	}
+	to{
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.active .modal{
+	animation: modal .3s;
+}
+.btnClose{
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+@media only screen and (max-width: 930px){
+	body{
+		display: grid;
+		grid-template-rows: 1fr 50px;
+		justify-items: center;
+		align-items: center;
+		background: linear-gradient(rgba(255, 0, 0, .5),rgba(255, 0, 0, .5)), url('../images/bg-intro-mobile.png') no-repeat center;
+		background-size: cover; 
+		font-family: $fontPopns;
+		font-size: 15px;
+	}
+	.flex{
+		flex-direction: column;
+	}
+	.text{
+		text-align: center;
+	}
+	.text h1{
+		font-size: 36px;
+		line-height: calc(30px * 1.3);
+	}
+	.text p{
+		line-height: calc(15px * 1.4);
+		margin: 0 auto;
+	}
+	.trial{
+		font-size: 11px;
+	}
+	form{
+		margin-bottom: 20px;
+	}
+	.btn{
+		font-size: 13px;
+	}
+}

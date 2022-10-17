@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
+  <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header class="logo-container">
+        <img class="logo" src="./images/logo.svg" alt="Base Apparel"/>
+      </header>
+
+      <div class="hero-container">
+        <!-- <picture> -->
+          <!-- <source media="(min-width:862px)" srcset="./images/hero-desktop.jpg"> -->
+          <!-- <source media="(min-width:465px)" srcset="./images/hero-mobile.jpg"> -->
+          <!-- <img class="hero-desktop" src="./images/hero-desktop.jpg" alt="Model Desktop"/> -->
+          <!-- <img class="hero-mobile" src="./images/hero-desktop.jpg" alt="Model Desktop"/> -->
+        <!-- </picture> -->
+        
+        <img class="hero-desktop" src="./images/hero-desktop.jpg" alt="Model Desktop"/>
+        <img class="hero-mobile" src="./images/hero-mobile.jpg" alt="Model Desktop"/>
+      </div>
+
+      <div class="content-wrapper">
+        <header class="desktop-logo">
+          <img src="./images/logo.svg" alt="Base Apparel"/>
+        </header>
+
+        <div class="title">
+          <p>We're</p>
+        </div>
+        <div class="coming-soon">
+          <p>Coming soon</p>
+        </div>
+
+        <div class="description">
+          <p>Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        </div>
+
+        <form id="form" novalidate>
+          <div class="input-container">
+            <input id="txtEmail" type="text" placeholder="Email Address"/>
+            <img id="dangerIcon" class="danger-button" src="./images/icon-error.svg" alt="Error icon"/>
+            <button class="btn" type="submit">
+              <img src="./images/icon-arrow.svg" alt="arrow"/>
+            </button>
+          </div>
+          <div id="dangerText" class="danger-text">
+            <p>Please provide a validate email</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.facebook.com/softwarealles" target="_blank">SoftwaRealles</a>.
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>

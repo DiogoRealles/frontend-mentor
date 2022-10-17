@@ -1,0 +1,136 @@
+@import '_variables';
+
+::selection{
+	background: $primary;
+	color: $white75;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+	body{
+		font-family: $fontInter;
+		background: $primary;
+		color: $white;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-template-rows: 1fr 50px;
+	}
+}
+.container{
+	width: min(90%, 1400px);
+	margin: 0 auto;
+}
+.card{
+	width: min(80%, 960px);
+	margin: 0 auto;
+	background: $secondary;
+	display: flex;
+}
+.card{
+	border-radius: 10px;
+}
+.card__img, img{
+	border-radius: 0 10px 10px 0;
+}
+.card__info{
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	order: 0;
+	flex: 1;
+}
+.card__info h1 span{
+	transition: all .3s ease-in-out;
+}
+.card__info:hover h1 span{
+	color: $accent;
+}
+.card__info p{
+	font-size: $font15;
+	color: $white75;
+	line-height: calc(15px * 1.5);
+	padding: 20px 0 40px 0;
+}
+.card__stats{
+	display: flex;
+	font-family: $fontLex;
+}
+.card__stat{
+	flex: 1;
+	text-align: center;
+}
+.card__stat h1{
+	color: $white;
+}
+.card__stat span{
+	color: $white75;
+	font-size: 13px;
+}
+.card__img{
+	order: 1;
+	flex: 1;
+	background: $accent;
+	overflow: hidden;
+	transform: scale(1);
+}
+.card__img img {
+	vertical-align: middle;
+	max-width: 100%;
+	opacity: .7;
+	mix-blend-mode: overlay;
+	transition: all .3s ease-in-out;
+}
+.card__img:hover img {
+	transform: scale(1.1);
+}
+.attribution{
+	background: $secondary;
+	text-align: center;
+	padding: 15px 0;
+	color: $white;
+  font-size: 11px;
+}
+.attribution a{
+	color: $white75;
+	text-decoration: none;
+  color: $link-footer;
+}
+@media only screen and (max-width: 1083px){
+	.container{
+		padding: 50px;
+	}
+	.card{
+		flex-direction: column;
+		max-width: 762px;
+	}
+	.card__info{
+		order: 1;
+		text-align: center;
+	}
+	.card__img{
+		order: 0;
+	}
+	.card{
+		border-radius: 10px;
+	}
+	.card__img, img{
+		border-radius: 10px 10px 0 0;
+	}
+	.card__info h1, .card__stat h1{
+		font-size: 18px;
+	}
+	.card__info p{
+		font-size: 13px;
+	}
+	.card__stat span{
+		font-size: 10px;
+	}
+	.attribution{
+		padding: 20px;
+	}
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+		<main>
+			<div class="container">
+				<div class="flex">
+					<div class="text">
+						<h1>Learn to code by watching others</h1>
+						<p>
+							See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+						</p>
+					</div>
+					<div class="box-form">
+						<div class="trial">
+							<strong>Try it free 7 days</strong> then $20/mo. thereafter
+						</div>
+						<form id="form" action="./">
+							<div class="input-block">
+								<input id="txtName" class="input" type="text" placeholder="First Name" autofocus aria-label="First Name">
+								<label for="txtName">First Name</label>
+								<span class="msgError">First Name cannot be empty</span>
+							</div>
+							<div class="input-block">
+								<input id="txtLastName" class="input" type="text" placeholder="Last Name" aria-label="Last Name">
+								<label for="txtLastName">Last Name</label>
+								<span class="msgError">Last Name cannot be empty</span>
+							</div>
+							<div class="input-block">
+								<input id="txtEmail" class="input" type="email" placeholder="Email Address" aria-label="Email Address">
+								<label for="txtEmail">Email Address</label>
+								<span class="msgError">Looks like this is not an email</span>
+							</div>
+							<div class="input-block">
+								<input id="txtPassword" class="input" type="password" placeholder="Password" aria-label="Password">
+								<label for="txtPassword">Password</label>
+								<span class="msgError">Password cannot be empty</span>
+							</div>
+
+							<button id="btn" class="btn" type="submit" >Claim your free trial</button>
+							<p class="terms">
+								<small>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></small>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.facebook.com/softwarealles" target="_blank">SoftwaRealles</a>.
+
+			<div id="modalContainer" class="modal-container">
+				<div class="modal">
+					<button id="btnClose" class="btnClose">&times</button>
+					<p>Nome: </p>
+					<p>Last Nome: </p>
+					<p>Email: </p>
+					<p>Password: </p>
+				</div>
+			</div>
+		</footer>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

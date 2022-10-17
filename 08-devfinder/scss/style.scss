@@ -1,0 +1,141 @@
+/* GENERAL */
+@import '_variables';
+
+::selection{
+  color: $primary;
+  background: $secondary;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,html{
+  height: 100%;
+  body{
+    font: normal normal normal 1em/1.5 'Roboto', sans-serif;
+    color: $secondary;
+    background: $assistant;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 50px;
+  }
+}
+// body{
+//   font: normal normal normal 1em/1.5 'Roboto', sans-serif;
+//   color: $secondary;
+//   background: $assistant;
+//   display: grid;
+// 	align-items: center;
+// 	grid-template-rows: 1fr 50px;
+// }
+.flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+
+.gap-2{
+  gap: 20px;
+}
+.container{
+	width: min(90%, 500px);
+	margin: 0 auto;
+}
+img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* TOP/FORM */
+.devfinder-top__form{
+  border: 1px solid $primary;
+  background: $primary;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0 10px 0;
+  i{
+    color: $emphasis;
+  }
+}
+.form-control{
+  flex: 1 1 300px;
+  padding: 8px 16px;
+  background: $primary;
+  border: 1px solid $primary;
+  outline: 1px solid $primary;
+  color: $secondary;
+  &::placeholder{
+    color: $secondary;
+  }
+}
+.btn{
+  padding: 10px 20px;
+  color: $secondary;
+  background: $emphasis;
+  border: 1px solid $emphasis;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  opacity: .9;
+  &:hover,
+  &:focus{
+    opacity: 1;
+  }
+}
+
+.devfinder-bottom{
+  background: $primary;
+  padding: 20px;
+  border-radius: 10px;
+}
+.imgBox{
+  width: 100px;
+  border-radius: 50%;
+  img{
+    border-radius: 50%;
+  }
+}
+.info{
+  flex: 1 1 260px;
+}
+#githubName{
+  font: normal normal normal 1.5em/100% 'Roboto', sans-serif;
+}
+#githubLogin{
+  color: $emphasis;
+}
+#githubLogin,
+#githubCreated_at{
+  font: normal normal normal .800em/100% 'Roboto', sans-serif;
+}
+.areaBio{
+  margin: 20px 0px;
+}
+.areaRepo{
+  background: $assistant;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.attribution{
+  width: 100%;
+	text-align: center;
+	padding: 15px 0;
+	color: $secondary;
+  font-size: 11px;
+}
+.attribution a{
+	color: $emphasis;
+	text-decoration: none;
+}

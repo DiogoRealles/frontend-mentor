@@ -1,0 +1,115 @@
+@import '_variables';
+
+::selection{
+	color: $white;
+	background: $black;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+	body{
+		display: grid;
+		grid-template-rows: 1fr 50px;
+		background: $bg-body;
+		font-family: $fontLex;
+	}
+}
+.container{
+	width: min(90%, 960px);
+	margin: 20px auto;
+}
+.card-flex{
+	display: flex;
+}
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+	max-width: 300px;
+}
+.card:nth-child(1){
+	background: $card1;
+	border-radius: 10px 0 0 10px;
+}
+.card:nth-child(2){
+	background: $card2;
+	color: $card2;
+}
+.card:nth-child(3){
+	background: $card3;
+	border-radius: 0 10px 10px 0;
+	color: $card3;
+}
+.btn--card1{
+	color: $card1;
+}
+.btn--card2{
+	color: $card2;
+}
+.btn--card3{
+	color: $card3;
+}
+.card__text{
+	padding: 0px 0;
+	color: $white;
+}
+.card__text h1{
+	text-transform: uppercase;
+	padding: 30px 0;
+	font-family: $fontBig;
+}
+.card__text p{
+	line-height: calc(18px * 1.4);
+	color: $white75;
+}
+.card__text button{
+	margin: 40px 0;
+}
+.btn{
+	padding: 10px 25px;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background: $bg-body;
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+}
+.btn:hover, .btn:active{
+	border: 2px solid $white;
+	color: $white;
+	background: transparent;
+}
+footer{
+	background: $card1;
+	text-align: center;
+	padding: 20px;
+	color: $white;
+}
+footer a{
+	text-decoration: none;
+	color: $card2;
+}
+
+@media only screen and (max-width: 879px){
+	.card-flex{
+		flex-direction: column;
+	}
+	.card{
+		margin: 0 auto;
+	}
+	.card:nth-child(1){
+		background: $card1;
+		border-radius: 10px 10px 0 0;
+	}
+	.card:nth-child(2){
+		background: $card2;
+	}
+	.card:nth-child(3){
+		background: $card3;
+		border-radius: 0 0 10px 10px;
+	}
+}

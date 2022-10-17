@@ -1,0 +1,118 @@
+@import '_variables';
+
+::selection{
+	background: $black;
+	color: $white;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+	body{
+		display: grid;
+		grid-template-rows: 1fr 50px;
+		font-family: $fontPoppins;
+		background: $grayLight;
+	}
+}
+.container{
+	width: min(80%, 960px);
+	margin: 0 auto;
+}
+header{
+	text-align: center;
+	padding: 40px 0;
+	color: $blueDark;
+}
+header h1{
+	font-weight: 100;
+}
+header h1 strong{
+	font-weight: 600;
+}
+header p{
+	max-width: 550px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.flex{
+	display: flex;
+	align-items: flex-start;
+	align-items: center;
+}
+.card{
+	background: $white;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 20px;
+	flex: 1 1 500px;
+	box-shadow: $boxShadow;
+}
+.card__top h1{
+	font-size: 20px;
+	padding: 10px 0;
+}
+.card__top p{
+	font-size: 14px;
+	padding: 10px 0 40px 0;
+	color: $blueDark;
+}
+.card__footer{
+	display: flex;
+	justify-content: flex-end;
+	transition: all .3s ease-in-out;
+}
+.card:hover img{
+	transition: all .3s ease-in-out;
+}
+.card.cyan{
+	border-top: 4px solid $cyan;
+}
+.card.cyan:hover h1, .card.cyan.active h1{
+	color: $cyan;
+}
+.card:hover img{
+	transform: scale(1.7);
+}
+.card.cyan:hover img, .card.cyan.active img{
+	transform: scale(1.7);
+}
+.card.red{
+	border-top: 4px solid $red;
+}
+.card.red:hover h1{
+	color: $red;
+}
+.card.orange{
+	border-top: 4px solid $orange;
+}
+.card.orange:hover h1{
+	color: $orange;
+}
+.card.blue{
+	border-top: 4px solid $blue;
+}
+.card.blue:hover h1{
+	color: $blue;
+}
+footer{
+	background: $black;
+	color: $white;
+	text-align: center;
+	padding: 20px;
+}
+footer a{
+	color: $blueGrayish;
+	text-decoration: none;
+}
+@media only screen and (max-width: 950px){
+	.flex{
+		display: block;
+	}
+	.card{
+		flex: 1 1 auto;
+	}
+}
