@@ -1,3 +1,132 @@
 @use './variables' as *;
 
-// 
+.main {
+  background: $light-100;
+
+  header {
+    h1 {
+      font-size: 6rem;
+      font-family: $font-title;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-size: 2rem;
+      color: $dark-200;
+      margin-bottom: 6rem;
+    }
+  }
+
+  .title-secondary {
+    font-size: 4rem;
+    color: $title-color;
+    font-family: $font-title;
+    margin-bottom: 2rem;
+  }
+
+  .preparation {
+    background: $bg-body-200;
+    border-radius: 8px;
+    padding: 3.2rem;
+    margin-bottom: 4rem;
+
+    h3 {
+      color: $red-100;
+      font-size: 3.4rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+
+      li {
+        list-style: disc;
+        color: $dark-200;
+
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+
+        b {
+          color: $dark-100;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .ingredients {
+    border-bottom: 1px solid $gray-100;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+
+    ul {
+      margin-left: 1.8rem;
+
+      li {
+        list-style: disc;
+
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .instructions {
+    margin-bottom: 4rem;
+
+    ol {
+      padding-left: 2.4rem;
+
+      li {
+        &::marker {
+          font-weight: bold;
+          font-size: 1.8rem;
+        }
+
+        list-style: decimal;
+        color: #202020;
+        list-style: decimal;
+        color: $dark-200;
+
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+
+        b {
+          color: $dark-100;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    h2 {
+      //
+    }
+  }
+
+  .nutrition {
+    p {
+      margin-bottom: 2.4rem;
+    }
+
+    table {
+      width: 100%;
+
+      tbody {
+        tr {
+          td {
+            padding: 2.4rem;
+            border-bottom: 1px solid $gray-100;
+
+            &:nth-child(even) {
+              font-weight: bold;
+              color: $title-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
