@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+.container {
+  width: min(90%, 600px);
+  margin-inline: auto;
+  background: $light-300;
+  padding: 4rem;
+  border-radius: 1.8rem;
+}

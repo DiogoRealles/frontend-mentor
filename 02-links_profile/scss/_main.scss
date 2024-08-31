@@ -1,0 +1,41 @@
+@use './variables' as *;
+
+.main {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+
+    li {
+      width: 100%;
+
+      a {
+        border-radius: 0.6rem;
+        background: $light-200;
+        color: $light-100;
+        padding: 2.4rem;
+        width: 100%;
+        display: inline-block;
+        font-size: 2.4rem;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+
+        span {
+          display: flex;
+          gap: 2rem;
+          width: 160px;
+        }
+      }
+
+      &:is(:hover, :focus) {
+        a {
+          background: $light-100;
+        }
+      }
+    }
+  }
+}
