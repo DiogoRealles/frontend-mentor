@@ -1,0 +1,80 @@
+@use './variables' as *;
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  .card {
+    flex: 1;
+    border: 1px solid $dark-100;
+    border-radius: 1.4rem;
+    width: 100%;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding: 1.6rem;
+    background: $container-color;
+    display: flex;
+    flex-direction: column;
+
+    .card-top {
+      width: 100%;
+      height: 20rem;
+      overflow: hidden;
+      border-radius: 0.8rem;
+      margin-bottom: 2.4rem;
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .card-body {
+      flex-grow: 1;
+
+      span {
+        padding: 4px 8px;
+        background: $container-color;
+        color: $light-100;
+        border-radius: 0.4rem;
+        display: inline-block;
+        margin-bottom: 1.6rem;
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        font-size: 3.2rem;
+        color: $light-100;
+        margin-bottom: 1.8rem;
+        line-height: 135%;
+      }
+
+      p {
+        color: $light-100;
+        opacity: 0.8;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    .card-footer {
+      .button {
+        padding: 0.8rem 1.8rem;
+        background: $container-color;
+        border-radius: 0.4rem;
+        margin-bottom: 0.8rem;
+        font-size: 2.4rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

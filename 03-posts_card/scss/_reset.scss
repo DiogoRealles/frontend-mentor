@@ -22,18 +22,21 @@ html {
 body {
   font-family: $font-body;
   font-weight: 400;
-  color: $dark-100;
+  color: $light-100;
   font-size: 1.8rem;
   background: $dark-100;
   padding-block: 4rem;
+  line-height: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul,
 li {
   list-style: none;
 }
-
-:is(ul, li) a {
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -47,11 +50,8 @@ img {
 
 button,
 .button {
+  all: unset;
   cursor: pointer;
-  border: none;
-  background: transparent;
   display: inline-block;
-  font-family: inherit;
-  color: inherit;
-  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
