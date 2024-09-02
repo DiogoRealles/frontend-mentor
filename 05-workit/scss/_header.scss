@@ -1,0 +1,59 @@
+@use './variables' as *;
+
+header {
+  padding-block: 2.4rem;
+  background: $dark-purple;
+
+  .container {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        text-transform: lowercase;
+        font-size: 3.2rem;
+        color: $white-color;
+        font-weight: 200;
+        transition: all 0.3s ease-in-out;
+
+        span {
+          font-weight: bold;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .access {
+        color: $white-color;
+        display: inline-block;
+        padding: 0.4rem 1.8rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 100%;
+          height: 2px;
+          background: $green-bg;
+          transform: scaleX(0);
+          transform-origin: bottom left;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          color: $green-bg;
+
+          &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    }
+  }
+}

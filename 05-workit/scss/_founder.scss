@@ -1,0 +1,90 @@
+@use './variables' as *;
+
+.founder {
+  padding-block: 4rem;
+
+  .container {
+    position: relative;
+
+    img {
+      width: 47.7rem;
+      height: 47.7rem;
+      animation: zoom 5s infinite ease-in-out;
+    }
+
+    .info {
+      position: absolute;
+      top: 15rem;
+      right: 0rem;
+      background-color: $dark-purple;
+      padding: 8rem;
+      width: 100%;
+      max-width: 80rem;
+
+      h2 {
+        color: $white-color;
+        font-size: 5.6rem;
+        font-family: $font-title;
+        margin-bottom: 8rem;
+      }
+
+      p {
+        color: $white-color;
+        font-size: 1.8rem;
+        font-family: $font-body;
+        margin-bottom: 4rem;
+        line-height: 150%;
+      }
+
+      .button-green {
+        background: $green-bg;
+        color: $dark-purple;
+        padding: 1.6rem 3.2rem;
+        font-weight: 700;
+        border: 2px solid $green-bg;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        display: table;
+
+        &:hover {
+          background: $dark-purple;
+          color: $green-bg;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -6rem;
+        right: 10rem;
+        transform: translateX(-138.37px);
+        z-index: 2;
+        content: url('../img/bg-pattern-3.svg');
+        animation: bounce 5s infinite;
+      }
+
+      @keyframes zoom {
+        0% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}
